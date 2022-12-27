@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import './styles.css';
+import './canvas.js'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <div id='header'>
+      <h1>Scribbled</h1>
+      <div className='color' data-color="#e2a0a0"></div>
+      <div className='color' data-color="#e2b9a0"></div>
+      <div className='color' data-color="#e2cca0"></div>
+      <div className='color' data-color="#cde2a0"></div>
+      <div className='color' data-color="#a0e2dc"></div>
+      <div className='color' data-color="#a0b6e2"></div>
+      <div className='color' data-color="#bd9fe0"></div>
+      <div className='color' data-color="#e2a0e0"></div>
+      <div className='color' data-color="#b5b3b3"></div>
+      <div className='color' data-color="#FFF"></div>
+      <input id='lineWidth' type='number' value='5'/>
+      <button id='clear'>Clear</button>
+     </div>
+     <canvas id="canvas"></canvas>
     </div>
   );
 }
