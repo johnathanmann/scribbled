@@ -17,6 +17,10 @@ let lineWidth = 5;
 let startX;
 let startY;
 
+window.addEventListener('resize', e => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+})
 
 clear.addEventListener('click', e => {
     if (e.target.id === 'clear') {
