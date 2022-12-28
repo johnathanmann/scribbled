@@ -6,7 +6,7 @@ I made scribbled mostly because I wanted to learn about the canvas element so a 
 
 Check out the different aspects of the project below:
 
-- [Github Page](https://sprite-planner.herokuapp.com/)
+- [Github Page](https://johnathanmann.github.io/scribbled/)
 - [Repository](https://github.com/johnathanmann/scribbled)
 
 ![Screenshot of site](./src/assets/scribbled.png)
