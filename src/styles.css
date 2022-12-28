@@ -9,6 +9,11 @@ body{
   background-color: #cdbea8;
 }
 
+#pallete{
+  display: flex;
+  display: inline-flex;
+}
+
 .color{
   height: 30px;
   width: 30px;

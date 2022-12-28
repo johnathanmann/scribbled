@@ -3,8 +3,9 @@ import './styles.css';
 
 function App() {
   useEffect(() => {
-    const canvas = document.getElementById("canvas");
+const canvas = document.getElementById("canvas");
 const clear = document.getElementById("clear");
+const pallete = document.getElementById("pallete");
 const ctx = canvas.getContext('2d');
 const canvasOffsetX = canvas.offsetLeft;
 const canvasOffsetY = canvas.offsetTop;
@@ -24,6 +25,16 @@ clear.addEventListener('click', e => {
     }
 });
 
+pallete.addEventListener('click', e => {
+  if(e.target.className === 'color') {
+      ctx.strokeStyle = e.target.value;
+  }
+
+  if(e.target.id === 'lineWidth') {
+      lineWidth = e.target.value;
+  }
+  
+});
 
 const draw = (e) => {
     if(!isPainting) {
@@ -50,23 +61,25 @@ canvas.addEventListener('mouseup', e => {
 });
 
 canvas.addEventListener('mousemove', draw);
-
  });
   return (
     <div className="App">
      <div id='header'>
       <h1>Scribbled</h1>
-      <div className='color' data-color="#e2a0a0"></div>
-      <div className='color' data-color="#e2b9a0"></div>
-      <div className='color' data-color="#e2cca0"></div>
-      <div className='color' data-color="#cde2a0"></div>
-      <div className='color' data-color="#a0e2dc"></div>
-      <div className='color' data-color="#a0b6e2"></div>
-      <div className='color' data-color="#bd9fe0"></div>
-      <div className='color' data-color="#e2a0e0"></div>
-      <div className='color' data-color="#b5b3b3"></div>
-      <div className='color' data-color="#FFF"></div>
+      <div id="pallete">
+      <button className='color' value="#e2a0a0" type="submit"/>
+      <button className='color' value="#e2b9a0" type="submit"/>
+      <button className='color' value="#e2cca0" type="submit"/>
+      <button className='color' value="#cde2a0" type="submit"/>
+      <button className='color' value="#a0e2dc" type="submit"/>
+      <button className='color' value="#a0b6e2" type="submit"/>
+      <button className='color' value="#bd9fe0" type="submit"/>
+      <button className='color' value="#e2a0e0" type="submit"/>
+      <button className='color' value="#b5b3b3" type="submit"/>
+      <button className='color' value="#FFF" type="submit"/>
+      <button className='color' value="#000" type="submit"/>
       <label htmlFor='lineWidth'>Stroke:</label>
+      </div>
       <input id='lineWidth' type='number'/>
       <button id='clear'>Clear</button>
      </div>
