@@ -1,6 +1,6 @@
 # scribbled
 
-Scribbled is a simple drawing site made via react.
+I made scribbled mostly because I wanted to learn about the canvas element so a lot of this project is just from the tutorials I followed which are linked down below.  
 
 ## Check out the Project
 
@@ -9,7 +9,7 @@ Check out the different aspects of the project below:
 - [Heroku Deployment](https://sprite-planner.herokuapp.com/)
 - [Repository](https://github.com/johnathanmann/scribbled)
 
-![Screenshot of site]()
+![Screenshot of site](./src/assets/scribbled.png)
 
 ## Resources 
 [Build a Drawing App with HTML CSS & JavaScript](https://www.youtube.com/watch?v=h9Cpvss1An4&ab_channel=CodeCreative)<br>
