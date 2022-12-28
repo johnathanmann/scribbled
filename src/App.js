@@ -1,5 +1,6 @@
 import React, {useState, useEffect, useRef} from "react";
-import './styles.css';
+import './assets/styles.css';
+import smile from "./assets/smile.png"
 
 function App() {
   useEffect(() => {
@@ -65,7 +66,10 @@ canvas.addEventListener('mousemove', draw);
   return (
     <div className="App">
      <div id='header'>
+      <div id='title'>
       <h1>Scribbled</h1>
+      <img src={smile}/>
+      </div>
       <div id="pallete">
       <button className='color' value="#e2a0a0" type="submit"/>
       <button className='color' value="#e2b9a0" type="submit"/>
@@ -78,10 +82,12 @@ canvas.addEventListener('mousemove', draw);
       <button className='color' value="#b5b3b3" type="submit"/>
       <button className='color' value="#FFF" type="submit"/>
       <button className='color' value="#000" type="submit"/>
-      <label htmlFor='lineWidth'>Stroke:</label>
       </div>
+      <div id="stroke">
+      <label id='lineWidth'>Stroke:</label>
       <input id='lineWidth' type='number'/>
       <button id='clear'>Clear</button>
+      </div>
      </div>
      <canvas id="canvas"></canvas>
     </div>
