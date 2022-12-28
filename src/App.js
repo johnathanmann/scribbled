@@ -9,11 +9,8 @@ const clear = document.getElementById("clear");
 const pallete = document.getElementById("pallete");
 const stroke = document.getElementById("stroke");
 const ctx = canvas.getContext('2d');
-const canvasOffsetX = canvas.offsetLeft;
-const canvasOffsetY = canvas.offsetTop;
-
-canvas.width = window.innerWidth - canvasOffsetX;
-canvas.height = window.innerHeight - canvasOffsetY;
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
 let isPainting = false;
 let lineWidth = 5;
@@ -47,7 +44,7 @@ const draw = (e) => {
     ctx.lineWidth = lineWidth;
     ctx.lineCap = 'round';
 
-    ctx.lineTo(e.clientX - canvasOffsetX, e.clientY);
+    ctx.lineTo(e.clientX, e.clientY);
     ctx.stroke();
 }
 
@@ -67,6 +64,7 @@ canvas.addEventListener('mousemove', draw);
  });
  return (
   <div className="App">
+   <canvas id="canvas"></canvas>
    <div id='header'>
     <div id='title'>
     <h1>Scribbled</h1>
@@ -91,7 +89,6 @@ canvas.addEventListener('mousemove', draw);
     <button id='clear'>Clear</button>
     </div>
    </div>
-   <canvas id="canvas"></canvas>
   </div>
 );
 }
