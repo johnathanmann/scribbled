@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/scribbled/static/css/main.66b2ee78.css",
+    "main.js": "/scribbled/static/js/main.0b10644c.js",
+    "static/media/Symtext.ttf": "/scribbled/static/media/Symtext.2aa455c6466cc12eda8f.ttf",
+    "index.html": "/scribbled/index.html",
+    "main.66b2ee78.css.map": "/scribbled/static/css/main.66b2ee78.css.map",
+    "main.0b10644c.js.map": "/scribbled/static/js/main.0b10644c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.66b2ee78.css",
+    "static/js/main.0b10644c.js"
+  ]
+}
